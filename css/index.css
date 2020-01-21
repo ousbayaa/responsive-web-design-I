@@ -64,22 +64,35 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
-header {
-	padding: 30px 0px 0px 0px;
-}
-
 section, header {
 	margin: 0% 20% 0% 20%;
 }
 
+header {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding-top: 30px;
+}
+
+.section-flex {
+	display: flex;
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+
 nav {
-	display: inline-block;
-	vertical-align: top;
-	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;	
 }
 
 .logo {
-	margin-left: 2%;
+	/* width: 10%;
+	margin-right: 36%; */
 }
 
 nav a {
@@ -107,8 +120,7 @@ h1 {
 }
 
 #content-innovation {
-	display: inline-block;
-	width: 50%;
+	
 	vertical-align: top;
 }
 #content-innovation button {
@@ -122,16 +134,17 @@ h1 {
 }
 
 #content-img {
-	display: inline-block;
+	
 	text-align: right;
 }
 
 #content-img img {
-	width: 85%;
 	height: 85%;
 }
 
 #header-content {
+	display: flex;
+	justify-content: space-around;
 	margin-top: 50px;
 }
 
@@ -140,45 +153,30 @@ h1 {
 }
 
 .textsections {
+	display: flex;
 	margin-top: 40px;
 }
 
-.content {
-	display: inline-block;
-}
-
-#content-features {
-	width: 50%;
-}
-
-#content-about {
-	width: 49%;
+#SPV{
+	display: flex;
+	justify-content: space-between;
 }
 
 #content-midpage {
-	margin-top: 35px;
+	margin-top: 36px;
 	margin-bottom: 35px;
 }
 
-#content-services {
-	width: 33%;
-}
-
-#content-product {
-	width: 33%;
-}
-
-#content-vision {
-	width: 32%
-}
-
 #contact-section {
+	display: flex;
+	
 	margin-top: 35px;
 	margin-bottom: 35px;
 }
 
 #contact-section div {
-	width: 25%;
+	/* width: 25%; */
+	flex-basis: 20%;
 }
 
 #contact-section div p {
@@ -188,4 +186,143 @@ h1 {
 #footer {
 	text-align: center;
 	padding-bottom: 100px;
+}
+
+.services-header-img {
+	width: 100%;
+}
+
+#h1-services {
+	font-size: 35px;
+	padding-top: 0px;
+}
+
+#section-services {
+	flex-direction: column;
+	align-items: flex-start;
+}
+#section-contents {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
+}
+#section-contents div {
+	border: 1px solid black;
+	background-color: #F4F3F4;
+	padding: 15px;
+	padding-top: 25px;
+	flex-basis: 48%;
+	margin-bottom: 30px;
+}
+
+#section-contents div button{
+	border: 1px solid black;
+	border-radius: 5.5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-top: 20px;
+	margin-bottom: 8.4px;
+}
+
+.bolder-hr {
+	height: 3.6px;
+	background-color: black;
+}
+
+.section-flex ul{
+	list-style-type:square;
+	margin-left: 20px;
+	padding-top: 20px;
+}
+
+.section-flex ul li{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#facts {
+	justify-content: space-between;
+}
+
+#facts div {
+	flex-basis: 48%;
+}
+
+#footer-services {
+	padding-bottom: 20px;
+	padding-top: 70px;
+	text-align: center;
+}
+
+@media (max-width: 500px){
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        border-top: 1px solid grey;
+        text-align: center;
+        padding: 0px;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: rgb(201, 201, 201);
+        font-size: 18px;
+        font-weight: 1000;
+    }
+    nav a:last-child{
+        border-bottom: 1px solid grey;
+    }
+    header {
+        flex-direction: column-reverse;
+        margin: 0% 0% 0% 0%;
+        padding: 0px;
+    }
+    .logo {
+        width:35%;
+        align-self: center;
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    #content-img {
+        display: none;
+    }
+    #content-innovation button {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+    }
+    .textsections {
+        flex-direction: column;
+        margin-top: 0px;
+    }
+    .textsections div {
+        padding-top: 40px;
+    }
+    section {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    #content-midpage {
+        margin-bottom: 0px;
+    }
+    #content-midpage img {
+        width: 100%;
+    }
+    #SPV {
+        flex-direction: column;
+    }
+    #SPV div {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .linebreak hr{
+        height: 3px;
+        background: black;
+    }
+    #footer {
+        padding-bottom: 25px;
+    }
 }
