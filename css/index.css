@@ -139,7 +139,7 @@ h1 {
 }
 
 #content-img img {
-	height: 85%;
+    height: 85%;
 }
 
 #header-content {
@@ -166,7 +166,9 @@ h1 {
 	margin-top: 36px;
 	margin-bottom: 35px;
 }
-
+#content-midpage img {
+    width: 100%;
+}
 #contact-section {
 	display: flex;
 	
@@ -288,6 +290,21 @@ h1 {
         height: 3px;
         background: black;
     }
+    .textsections {
+        justify-content: space-between;
+    }
+    .textsections div {
+        flex-basis: 47.89%;
+    }
+    #SPV {
+        justify-content: space-between;
+    }
+    #SPV div{
+        flex-basis: 30.4%;
+    }
+    #footer {
+        padding-bottom: 25px;
+    }
 }
 
 @media (max-width: 500px) {
@@ -340,9 +357,6 @@ h1 {
     }
     #content-midpage {
         margin-bottom: 0px;
-    }
-    #content-midpage img {
-        width: 100%;
     }
     #SPV {
         flex-direction: column;
