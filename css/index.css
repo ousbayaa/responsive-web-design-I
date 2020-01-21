@@ -257,7 +257,26 @@ h1 {
 	text-align: center;
 }
 
-@media (max-width: 500px){
+@media (max-width: 800px) and (min-width: 501px) {
+    header {
+        flex-direction: column-reverse;
+    }
+    .logo {
+        width: 35%;
+        align-self: center;
+        padding-bottom: 50px;
+    }
+    #content-img {
+        display: none;
+    }
+    #content-innovation button {
+        background-color: white;
+        border: 1px solid black;
+        color: black;
+    }
+}
+
+@media (max-width: 500px) {
     nav {
         flex-direction: column;
     }
